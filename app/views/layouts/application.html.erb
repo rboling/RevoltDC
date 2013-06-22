@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WingmanFinder</title>
+  <title>Govstream</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!-- google fonts API -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -17,14 +19,13 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to "GovStream", root_url, :class => "brand" %>
-        <!--<a class="brand" href="#" onclick="go_to_root();">GovStream</a>-->
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
   </div>
@@ -51,8 +52,14 @@
     </div>
   </div>
 
-
-<%= yield %>
-
+  <div class="wrapper">
+    <footer>
+      <p class="pull-left">
+        Govstream 2013
+          <br>
+        Washington D.C.
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
