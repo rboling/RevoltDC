@@ -46476,3 +46476,18 @@ Served asset /application.js - 304 Not Modified (36ms)
 
 Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
 Served asset /home.png - 304 Not Modified (0ms)
+
+
+Started GET "/twilio/process_sms" for 127.0.0.1 at 2013-06-22 16:14:51 -0400
+Processing by TwilioController#process_sms as HTML
+  [1m[36mUser Load (22.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  [1m[35mUser Load (22.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `capitalize' for nil:NilClass):
+  app/controllers/twilio_controller.rb:4:in `process_sms'
+
+
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
