@@ -122,11 +122,7 @@ DEPENDENCIES
   authlogic
   coffee-rails (~> 3.2.1)
   jquery-rails
-<<<<<<< HEAD
   pg
-=======
-  mysql2
->>>>>>> cfe0f7b8415ca61ecd2833c984c8b608bf73553a
   rails (= 3.2.0)
   rails_legacy_mapper
   sass-rails (~> 3.2.3)
