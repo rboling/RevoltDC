@@ -56,7 +56,7 @@ class TextMessagesController < ApplicationController
 
   def create
     @text_message = TextMessage.new(params[:text_message])
-
+    @text_message.name = current_user.name
     respond_to do |format|
       if @text_message.save
         phone_number = @text_message.receiver
