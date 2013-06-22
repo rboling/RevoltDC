@@ -17,12 +17,11 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
-	padding-bottom: 20px;
 }
 
 #user_tab {
   font-size: 12px;
-  padding-top: 20px;
+  padding-top: 41px;
   float: right;
 }
 #send_text_message{
