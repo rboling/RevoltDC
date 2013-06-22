@@ -1,4 +1,0 @@
-RevoltDC
-========
-
-Our RevoltDC repository
