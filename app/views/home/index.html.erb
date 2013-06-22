@@ -12,8 +12,7 @@
 	        	<% if current_user.is_politician %>
 	        		<%= link_to "Send A Text Message", new_text_message_path, :class => "button_s" %>
 	    		<% else %>
-	    			| Send requests <br />
-	    		<%= link_to "Send a Request", new_politician_request_path %>
+	    		<%= link_to "Send a Request", new_politician_request_path, :class => "button_s" %>
 	    </div>
 	        <% end %>
 	   	<div class="not_logged">
