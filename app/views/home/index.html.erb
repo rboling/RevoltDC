@@ -1,4 +1,10 @@
 <div id="home">
-  <h1>Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+  <% if current_user %>
+  	<% if current_user.is_politician %>
+  	  <h3>See Updates From Your Users</h3>
+  	 <% else %>
+  	  <h3>Message Politicians</h3>
+  	  <%= link_to "Politican Reqests", new_politician_request_path %>
+  	<% end %>
+  <% end %>
 </div>

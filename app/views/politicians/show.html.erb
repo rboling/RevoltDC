@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @politician.name %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @politician.state %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @politician.city %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @politician.district %>
+</p>
+
+<p>
+  <b>Office:</b>
+  <%= @politician.office %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @politician.phone_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_politician_path(@politician) %> |
+<%= link_to 'Back', politicians_path %>

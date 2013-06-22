@@ -40,9 +40,13 @@
     </div>
     <div id="send_text_message">
       <% if current_user %>
-        <%= link_to "Send a Text Message", new_text_message_path %> 
+        <%if current_user.is_politician %>
+          <%= link_to "Send a Text Message", new_text_message_path %> 
+        <% else %>
+          See Updates from Your Politicians
+        <% end %>
       <% else %>
-        <h1>Log In to Send Text Messages</h1>
+        Register Now
       <% end %>
     </div>
   </div>

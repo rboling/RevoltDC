@@ -1,4 +1,4 @@
-WingmanFinder::Application.routes.draw do ||
+WingmanFinder::Application.routes.draw do 
   get "home/about"
 
   get "home/careers"
@@ -14,6 +14,7 @@ WingmanFinder::Application.routes.draw do ||
   resources :text_messages
   resources :users
   resources :user_sessions
+  resources :politician_requests
 
   root :to => "home#index"
   

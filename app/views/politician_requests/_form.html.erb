@@ -1,0 +1,29 @@
+<%= form_for(@politician_request) do |f| %>
+  <% if @politician_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@politician_request.errors.count, "error") %> prohibited this politician_request from being saved:</h2>
+
+      <ul>
+      <% @politician_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :request %><br />
+    <%= f.text_area :request %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :users%><br /> 
+    <%= f.select( :users, [["foo", "foo"], ["bar", "bar"], ["flee", "flee"]], {:multiple => true, :size => 2}, {:prompt => "choose politicians"} )%> 
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

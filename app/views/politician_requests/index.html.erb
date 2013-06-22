@@ -1,0 +1,25 @@
+<h1>Listing politician_requests</h1>
+
+<table>
+  <tr>
+    <th>Request</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @politician_requests.each do |politician_request| %>
+  <tr>
+    <td><%= politician_request.request %></td>
+    <td><%= politician_request.email %></td>
+    <td><%= link_to 'Show', politician_request %></td>
+    <td><%= link_to 'Edit', edit_politician_request_path(politician_request) %></td>
+    <td><%= link_to 'Destroy', politician_request, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Politician request', new_politician_request_path %>

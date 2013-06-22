@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Request:</b>
+  <%= @politician_request.request %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @politician_request.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_politician_request_path(@politician_request) %> |
+<%= link_to 'Back', politician_requests_path %>

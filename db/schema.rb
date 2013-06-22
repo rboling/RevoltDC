@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622151459) do
+ActiveRecord::Schema.define(:version => 20130622160227) do
 
   create_table "bars", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(:version => 20130622151459) do
     t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "politician_requests", :force => true do |t|
+    t.text     "request"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "politician"
+  end
+
+  create_table "politicians", :force => true do |t|
+    t.string   "name"
+    t.string   "state"
+    t.string   "city"
+    t.integer  "district"
+    t.string   "office"
+    t.string   "phone_number"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "email"
   end
 
   create_table "text_messages", :force => true do |t|
@@ -47,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130622151459) do
     t.string   "persistence_token"
     t.string   "email"
     t.string   "phone_number"
+    t.boolean  "is_politician"
   end
 
 end
