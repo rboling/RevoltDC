@@ -44590,3 +44590,1889 @@ Served asset /phone.png - 304 Not Modified (0ms)
 
 Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 15:43:36 -0400
 Served asset /home.png - 304 Not Modified (0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130616201418)
+Migrating to CreateBars (20130616201614)
+Migrating to AddStateToUsers (20130616201707)
+Migrating to AddCryptedPasswordToUsers (20130617013457)
+Migrating to AddPasswordSaltToUsers (20130617013538)
+Migrating to AddPersistenceTokenToUsers (20130617013657)
+Migrating to AddEmailToUsers (20130617013730)
+Migrating to CreateUserSessions (20130617015709)
+Migrating to AddEmailToUserSessions (20130617030905)
+Migrating to AddPasswordToUserSessions (20130617030923)
+Migrating to CreateTextMessages (20130622140859)
+Migrating to RemoveSenderFromTextMessages (20130622150029)
+Migrating to AddPhoneNumberToUsers (20130622151459)
+Migrating to CreatePoliticians (20130622152802)
+Migrating to AddEmailToPoliticians (20130622152828)
+Migrating to AddIsPoliticianToUser (20130622153045)
+Migrating to CreatePoliticianRequests (20130622160144)
+Migrating to AddPoliticianToPoliticianRequests (20130622160227)
+  [1m[35m (7.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bars")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("politician_requests")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("politicians")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("text_messages")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("user_sessions")
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 15:50:53 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (68.9ms)
+Compiled bars.css  (164ms)  (pid 3312)
+Compiled bootstrap-responsive.css  (2ms)  (pid 3312)
+Compiled bootstrap.css  (10ms)  (pid 3312)
+Compiled home.css  (21ms)  (pid 3312)
+Compiled politician_requests.css  (20ms)  (pid 3312)
+Compiled politicians.css  (6ms)  (pid 3312)
+Compiled scaffolds.css  (33ms)  (pid 3312)
+Compiled text_messages.css  (65ms)  (pid 3312)
+Compiled user_sessions.css  (57ms)  (pid 3312)
+Compiled users.css  (44ms)  (pid 3312)
+Compiled application.css  (11ms)  (pid 3312)
+Compiled bars.js  (3058ms)  (pid 3312)
+Compiled bootstrap.js  (5ms)  (pid 3312)
+Compiled home.js  (564ms)  (pid 3312)
+Compiled politician_requests.js  (893ms)  (pid 3312)
+Compiled politicians.js  (713ms)  (pid 3312)
+Compiled text_messages.js  (530ms)  (pid 3312)
+Compiled user_sessions.js  (557ms)  (pid 3312)
+Compiled users.js  (564ms)  (pid 3312)
+Compiled application.js  (7350ms)  (pid 3312)
+Completed 200 OK in 9804ms (Views: 8900.4ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:03 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:03 -0400
+Served asset /bars.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:03 -0400
+Served asset /application.css - 200 OK (163ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /bootstrap.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /home.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /politician_requests.css - 200 OK (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /politicians.css - 200 OK (7ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /text_messages.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /user_sessions.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /jquery.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (60ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /bars.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /politician_requests.js - 200 OK (6ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /politicians.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /user_sessions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /text_messages.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:04 -0400
+Served asset /application.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 15:51:05 -0400
+Served asset /phone.png - 304 Not Modified (141ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 15:51:05 -0400
+Served asset /home.png - 200 OK (17ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (16.0ms)
+  Rendered users/new.html.erb within layouts/application (366.1ms)
+Completed 200 OK in 429ms (Views: 407.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:36 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:37 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /bars.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 15:51:53 -0400
+Served asset /phone.png - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-22 15:52:04 -0400
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (20.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /bars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:05 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:08 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /politician_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 15:52:09 -0400
+Served asset /phone.png - 304 Not Modified (1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (14.0ms)
+  Rendered users/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:10 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:11 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-22 15:52:29 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5NN/Y7m7Y2Pd/cOeC2teeDAlQcDZUEjONrcfKMqk4us=", "user"=>{"name"=>"Kevin Sun", "city"=>"Annandale", "bio"=>"Me!", "email"=>"kevnsn@gmail.com", "phone_number"=>"6182866786", "is_politician"=>"true", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 FROM "users" WHERE LOWER("users"."email") = LOWER('kevnsn@gmail.com') LIMIT 1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (59.1ms)[0m  INSERT INTO "users" ("bio", "city", "created_at", "crypted_password", "email", "is_politician", "name", "password_salt", "persistence_token", "phone_number", "state", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["bio", "Me!"], ["city", "Annandale"], ["created_at", Sat, 22 Jun 2013 19:52:30 UTC +00:00], ["crypted_password", "05489ef7b266f5d96fa830b79636b7b58d3a197ba288c89c10cff5be52c8bd801af3578cb2384cd6dcc1cd8346782de7aa154aa444c4031d7a3e1b180ecf3cae"], ["email", "kevnsn@gmail.com"], ["is_politician", "true"], ["name", "Kevin Sun"], ["password_salt", "yQeRqX756xFZzgDjaujn"], ["persistence_token", "cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3"], ["phone_number", "6182866786"], ["state", nil], ["updated_at", Sat, 22 Jun 2013 19:52:30 UTC +00:00]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 595ms (ActiveRecord: 69.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-06-22 15:52:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 286ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:30 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:31 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/_form.html.erb (11.0ms)
+  Rendered users/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:34 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:42 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/_form.html.erb (11.0ms)
+  Rendered users/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 91ms (Views: 86.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:47 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 57ms (Views: 51.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /bars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /politicians.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:52:56 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-06-22 15:53:05 -0400
+Processing by UserSessionsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  Rendered user_sessions/_form.html.erb (19.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 60ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /user_sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /politician_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /user_sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:06 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-06-22 15:53:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:10 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:10 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 15:53:11 -0400
+Served asset /phone.png - 304 Not Modified (2ms)
+
+
+Started GET "/text_messages/new" for 127.0.0.1 at 2013-06-22 15:53:28 -0400
+Processing by TextMessagesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1
+  Rendered text_messages/_form.html.erb (8.0ms)
+  Rendered text_messages/new.html.erb within layouts/application (96.5ms)
+Completed 200 OK in 181ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /bars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /politician_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /politicians.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:53:29 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/text_messages" for 127.0.0.1 at 2013-06-22 15:53:42 -0400
+Processing by TextMessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5NN/Y7m7Y2Pd/cOeC2teeDAlQcDZUEjONrcfKMqk4us=", "text_message"=>{"content"=>"testme", "receiver"=>"6172866786"}, "commit"=>"Create Text message"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "text_messages" ("content", "created_at", "receiver", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "testme"], ["created_at", Sat, 22 Jun 2013 19:53:42 UTC +00:00], ["receiver", "6172866786"], ["updated_at", Sat, 22 Jun 2013 19:53:42 UTC +00:00]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 816ms
+
+Twilio::REST::RequestError (The number +16172866786 is unverified. Trial accounts cannot send messages to unverified numbers; verify +16172866786 at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers.):
+  app/controllers/text_messages_controller.rb:49:in `send_text_message'
+  app/controllers/text_messages_controller.rb:63:in `block in create'
+  app/controllers/text_messages_controller.rb:60:in `create'
+
+
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered c:/Ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 54ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /bars.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /politician_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:11 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:12 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:54:12 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /text_messages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /politician_requests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /phone.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 15:58:15 -0400
+Served asset /home.png - 304 Not Modified (0ms)
+  [1m[36m (42.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (27.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (32.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (24.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130616201418)
+  [1m[36m (27.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (35.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "city" character varying(255), "bio" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (24.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130616201418')[0m
+  [1m[35m (26.0ms)[0m  COMMIT
+Migrating to CreateBars (20130616201614)
+  [1m[36m (26.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (26.0ms)[0m  CREATE TABLE "bars" ("id" serial primary key, "name" character varying(255), "city" character varying(255), "state" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (20.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130616201614')[0m
+  [1m[35m (29.0ms)[0m  COMMIT
+Migrating to AddStateToUsers (20130616201707)
+  [1m[36m (18.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (21.0ms)[0m  ALTER TABLE "users" ADD COLUMN "state" character varying(255)
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130616201707')[0m
+  [1m[35m (25.0ms)[0m  COMMIT
+Migrating to AddCryptedPasswordToUsers (20130617013457)
+  [1m[36m (55.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (23.0ms)[0m  ALTER TABLE "users" ADD COLUMN "crypted_password" character varying(255)
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617013457')[0m
+  [1m[35m (20.0ms)[0m  COMMIT
+Migrating to AddPasswordSaltToUsers (20130617013538)
+  [1m[36m (21.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (93.0ms)[0m  ALTER TABLE "users" ADD COLUMN "password_salt" character varying(255)
+  [1m[36m (20.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617013538')[0m
+  [1m[35m (22.0ms)[0m  COMMIT
+Migrating to AddPersistenceTokenToUsers (20130617013657)
+  [1m[36m (25.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (24.0ms)[0m  ALTER TABLE "users" ADD COLUMN "persistence_token" character varying(255)
+  [1m[36m (23.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617013657')[0m
+  [1m[35m (43.0ms)[0m  COMMIT
+Migrating to AddEmailToUsers (20130617013730)
+  [1m[36m (96.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (71.0ms)[0m  ALTER TABLE "users" ADD COLUMN "email" character varying(255)
+  [1m[36m (26.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617013730')[0m
+  [1m[35m (29.0ms)[0m  COMMIT
+Migrating to CreateUserSessions (20130617015709)
+  [1m[36m (24.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (23.0ms)[0m  CREATE TABLE "user_sessions" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617015709')[0m
+  [1m[35m (20.0ms)[0m  COMMIT
+Migrating to AddEmailToUserSessions (20130617030905)
+  [1m[36m (26.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (18.0ms)[0m  ALTER TABLE "user_sessions" ADD COLUMN "email" character varying(255)
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617030905')[0m
+  [1m[35m (24.0ms)[0m  COMMIT
+Migrating to AddPasswordToUserSessions (20130617030923)
+  [1m[36m (20.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (27.0ms)[0m  ALTER TABLE "user_sessions" ADD COLUMN "password" character varying(255)
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130617030923')[0m
+  [1m[35m (33.0ms)[0m  COMMIT
+Migrating to CreateTextMessages (20130622140859)
+  [1m[36m (19.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (48.0ms)[0m  CREATE TABLE "text_messages" ("id" serial primary key, "content" text, "sender" character varying(255), "receiver" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (18.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622140859')[0m
+  [1m[35m (28.0ms)[0m  COMMIT
+Migrating to RemoveSenderFromTextMessages (20130622150029)
+  [1m[36m (21.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (27.0ms)[0m  ALTER TABLE "text_messages" DROP "sender"
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622150029')[0m
+  [1m[35m (21.0ms)[0m  COMMIT
+Migrating to AddPhoneNumberToUsers (20130622151459)
+  [1m[36m (19.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (24.0ms)[0m  ALTER TABLE "users" ADD COLUMN "phone_number" character varying(255)
+  [1m[36m (19.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622151459')[0m
+  [1m[35m (30.0ms)[0m  COMMIT
+Migrating to CreatePoliticians (20130622152802)
+  [1m[36m (25.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (34.0ms)[0m  CREATE TABLE "politicians" ("id" serial primary key, "name" character varying(255), "state" character varying(255), "city" character varying(255), "district" integer, "office" character varying(255), "phone_number" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622152802')[0m
+  [1m[35m (22.0ms)[0m  COMMIT
+Migrating to AddEmailToPoliticians (20130622152828)
+  [1m[36m (20.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (22.0ms)[0m  ALTER TABLE "politicians" ADD COLUMN "email" character varying(255)
+  [1m[36m (18.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622152828')[0m
+  [1m[35m (24.0ms)[0m  COMMIT
+Migrating to AddIsPoliticianToUser (20130622153045)
+  [1m[36m (22.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (20.0ms)[0m  ALTER TABLE "users" ADD COLUMN "is_politician" bool
+  [1m[36m (17.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622153045')[0m
+  [1m[35m (20.0ms)[0m  COMMIT
+Migrating to CreatePoliticianRequests (20130622160144)
+  [1m[36m (19.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (26.0ms)[0m  CREATE TABLE "politician_requests" ("id" serial primary key, "request" text, "email" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (21.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622160144')[0m
+  [1m[35m (23.1ms)[0m  COMMIT
+Migrating to AddPoliticianToPoliticianRequests (20130622160227)
+  [1m[36m (25.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (21.0ms)[0m  ALTER TABLE "politician_requests" ADD COLUMN "politician" character varying(255)
+  [1m[36m (22.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622160227')[0m
+  [1m[35m (21.0ms)[0m  COMMIT
+  [1m[36m (19.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (29.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'bars'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (21.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'politician_requests'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35m (41.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'politicians'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (114.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'text_messages'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+  [1m[35m (20.0ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'user_sessions'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (23.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-22 16:11:29 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (25.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  [1m[35mUser Load (26.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered home/index.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 1398ms (Views: 505.1ms | ActiveRecord: 253.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /application.css - 304 Not Modified (76ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /bars.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /home.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /politician_requests.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /bootstrap.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /politicians.css - 304 Not Modified (57ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /scaffolds.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /text_messages.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /user_sessions.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /bars.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:32 -0400
+Served asset /home.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /politician_requests.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /politicians.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /user_sessions.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /text_messages.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /application.js - 304 Not Modified (85ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /phone.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 16:11:33 -0400
+Served asset /home.png - 304 Not Modified (14ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (28.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'cc408d175602cff6a934f8906ff007cb578b6aa861d71d8256a24366117319f52c29ea63c842b008f6c84b2543212d755f10e437d8c6165ea60b53c782268bf3' LIMIT 1[0m
+  [1m[35mUser Load (22.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered users/_form.html.erb (14.0ms)
+  Rendered users/new.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 248ms (Views: 119.0ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /politicians.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /politician_requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /politicians.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /user_sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /application.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 16:12:21 -0400
+Served asset /home.png - 304 Not Modified (0ms)

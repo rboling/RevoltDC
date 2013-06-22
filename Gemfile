@@ -46,3 +46,6 @@ gem 'rails_legacy_mapper'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'pg'
+#gem 'activerecord-postgres-adapter'
