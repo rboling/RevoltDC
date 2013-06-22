@@ -5,15 +5,16 @@
 		<p class="tag">political engagement redefined</p>
 	</div>
 	<div class="login_info">
-
-		<% if current_user %>
-			<%= link_to "Edit Profile", edit_user_path(current_user) %> |
-	        <%= link_to "Logout", logout_path %>
-	        <% if current_user.is_politician %>
-	        	| <%= link_to "Send A Text Message", new_text_message_path %>
-	    	<% else %>
-	    		| Send requests <br />
+		<div class="button_wrapper_s">
+			<% if current_user %>
+				<%= link_to "Edit Profile", edit_user_path(current_user), :class => "button_s" %>
+	        	<%= link_to "Logout", logout_path, :class => "button_s" %>
+	        	<% if current_user.is_politician %>
+	        		<%= link_to "Send A Text Message", new_text_message_path, :class => "button_s" %>
+	    		<% else %>
+	    			| Send requests <br />
 	    		<%= link_to "Send a Request", new_politician_request_path %>
+	    </div>
 	        <% end %>
 	   	<div class="not_logged">
 	    <% else %>

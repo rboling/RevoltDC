@@ -109,6 +109,17 @@ p.or{
 	color: #888;
 	font-size: 15pt;
 }
+.button_wrapper_s{
+	max-width: 100%;
+	text-align: center;
+}
+.button_s{
+	padding: 10px 20px 10px 20px;
+	border: 2px solid #888;
+	border-radius: 10px;
+	color: #888;
+	font-size: 13pt;	
+}
 .wrapper{
 	max-width: 650px;
 	margin: auto;
