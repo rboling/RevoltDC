@@ -1,3 +1,71 @@
+== Govstream
+Political engagement, redefined.
+
+Rob Boling, Ryan Rich, Corey Speisman, Kevin Sun
+
+== Summary
+Govstream aims to connect constituents and political candidates through mobile technology and constant engagement.  The intended audience of Govstream includes the general public, who sign up to be informed about a particular candidate. The contact information of the interested public becomes a resource for political candidates to establish an ongoing dialogue with constituents. 
+
+== Pages
+Home Page
+Form to signup
+Information about text-messaging
+
+Login Page
+Allow users to login via phone.
+Send the phone with a text message as ‘verification;
+Allow the use of username and password to login
+Particularly useful for campaigns.
+
+User Dashboard
+Users are able to see which candidates they are tracking.
+Users are able to see updates which they ‘received,’ either from the candidates or GovStream
+
+Politician Dashboard
+Politicians are able to see how many people and analytics about the people tracking them.
+Politicians should be able to see updates they have sent to their constituents
+Politicians should have access/link/call to action to the Engagement Dashboard
+
+Engagement Dashboard
+Politicians will have the option to send a message to their constituents by entering a web-form.
+Politicians should be able to see previous updates and the responses they have received to each update (either text responses, or polls).
+
+== Functionality
+The key features of Govstream are:
+
+Constituent Signup
+Constituents are able to sign up to ‘track’ a particular candidate via a web form.
+Candidates should be sign up for more than one candidate (for example, their governor, house representative, and senator)
+Constituents are able to sign up to ‘track’ a particular candidate via text to shortcode.
+For example, “track boxer” to shortcode 555555.
+A confirmation will be sent to the user asking him or her to confirm the tracking.
+
+Political Tracking
+GovStream will send updates about important bills to constituents.
+
+Constituent Engagement for Politicians
+Politicians are able to send text messages to the the members of the general public who ‘tracked’ that particular candidate.
+For example, the office of Barbara Boxer would be able to send messages to each constituent who signed up to track him/her.
+Politicians are able to send messages soliciting feedback about a particular issue.
+For example, Sen. Boxer could send a message asking for feedback.
+The text-message responses would be recorded and could be used for constituent outreach.
+Politicians are able to send messages soliciting data about a particular issue.
+For example, Sen. Boxer could send a message asking for feedback.
+The text-message responses would be recorded and could be used for constituent outreach.
+
+Features that could be built or explored later.
+Location-based signups: using GPS location to automatically detect relevant candidates.
+Addressed based-candidate finding.
+Real-time roll-call tracking for 
+SMS shortcode fundraising: allow candidates to solicit donations directly via SMS messages, and allow the general public to donate directly.
+
+== Technology
+Govstream is built with the following technologies:
+The Ruby on Rails framework.
+jQuery and Boostrap.js
+
+== Code Documentation
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
