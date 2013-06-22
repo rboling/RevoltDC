@@ -6,6 +6,7 @@
 
 development:
   adapter: mysql2
+<<<<<<< HEAD
   encoding: utf8
   reconnect: false
   database: wingman_finder_one
@@ -20,6 +21,17 @@ development:
 #  database: db/development.sqlite3
 #  pool: 5
 #  timeout: 5000
+=======
+  host: localhost
+  encoding: utf8
+  reconnect: false
+  database: test
+  pool: 5
+  username: dev
+  password: 
+  socket: /var/run/mysqld/mysqld.sock
+
+>>>>>>> dbf9e8941a2edf92a4765d969edcdd88a04679f3
 
 #development:
 #  adapter: sqlite3

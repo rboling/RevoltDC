@@ -1,5 +1,9 @@
+<div id="users">
 <p id="notice"><%= notice %></p>
-
+<ul>
+<li><%= link_to 'Edit', edit_user_path(@user), :class => "button" %></li> 
+<li><%= link_to 'Back', users_path, :class => "button" %></li>
+</ul>
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -11,10 +15,14 @@
 </p>
 
 <p>
-  <b>Bio:</b>
+  
+	<p>
+	<b>Bio:</b>
   <%= @user.bio %>
+	</p>
+	</div>
 </p>
+</div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
