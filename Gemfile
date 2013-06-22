@@ -1,5 +1,4 @@
-#source 'https://rubygems.org'
-gem 'heroku'
+source 'https://rubygems.org'
 gem 'rails', '3.2.0'
 
 # Bundle edge Rails instead:
