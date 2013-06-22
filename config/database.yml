@@ -5,15 +5,10 @@
 #   gem 'sqlite3'
 
 development:
-  adapter: mysql2
-<<<<<<< HEAD
-  encoding: utf8
-  reconnect: false
-  database: wingman_finder_one
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: root
-  password: beethoven3
-  socket: /var/run/mysqld/mysqld.sock
+  timeout: 5000
 
 
 #development:
@@ -21,17 +16,14 @@ development:
 #  database: db/development.sqlite3
 #  pool: 5
 #  timeout: 5000
-=======
-  host: localhost
-  encoding: utf8
-  reconnect: false
-  database: test
-  pool: 5
-  username: dev
-  password: 
-  socket: /var/run/mysqld/mysqld.sock
-
->>>>>>> dbf9e8941a2edf92a4765d969edcdd88a04679f3
+#  host: localhost
+#  encoding: utf8
+#  reconnect: false
+#  database: test
+#  pool: 5
+#  username: dev
+#  password: 
+#  socket: /var/run/mysqld/mysqld.sock
 
 #development:
 #  adapter: sqlite3
