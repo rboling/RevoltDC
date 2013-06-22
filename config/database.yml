@@ -4,11 +4,17 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 
+
 #development:
-#  adapter: sqlite3
-#  database: db/development.sqlite3
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: wingman_finder_one
 #  pool: 5
-#  timeout: 5000
+#  username: root
+#  password: beethoven3
+#  socket: /var/run/mysqld/mysqld.sock
+
 
 development:
   adapter: postgresql
@@ -21,6 +27,15 @@ development:
   pool: 5
   username: tdvuerclorofqx
   password: XWc5GkCaoLpP3-OafJD69DInih
+=======
+#  host: localhost
+#  encoding: utf8
+#  reconnect: false
+#  database: test
+#  pool: 5
+#  username: dev
+#  password: 
+>>>>>>> cfe0f7b8415ca61ecd2833c984c8b608bf73553a
 #  socket: /var/run/mysqld/mysqld.sock
 
 #development:

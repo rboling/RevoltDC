@@ -19,9 +19,13 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= collection_select( :users, :user_ids, User.all, :id, :name, options = {:multiple => true})%> 
-  </div>
+  <%# fields_for(@users) do |user_stuff|  %>
+    <div class="field">
+      <%#= user_stuff.label "Users"%><br />
+      <%# = collection_select( :users, :id, User.all, :id, :name, {}, {:multiple => true})%> 
+      <%= select_tag 'user', options_from_collection_for_select(User.where(:is_politician => true), :id, :name), multiple: false, size: '10%' %>
+    </div>
+  <%# end %>
   <div class="actions">
     <%= f.submit %>
   </div>

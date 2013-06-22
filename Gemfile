@@ -25,7 +25,7 @@ gem 'twilio-ruby'
 
 gem 'jquery-rails'
 
-# gem 'mysql2'
+gem 'mysql2'
 
 gem 'authlogic'
 

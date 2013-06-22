@@ -25,9 +25,12 @@ class PoliticianRequestsController < ApplicationController
   # GET /politician_requests/new.json
   def new
     @politician_request = PoliticianRequest.new
+    @user = @politician_request.user
+    #@tracker_users = @politician_request.users.build
+
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html  
       format.json { render json: @politician_request }
     end
   end
@@ -41,6 +44,9 @@ class PoliticianRequestsController < ApplicationController
   # POST /politician_requests.json
   def create
     @politician_request = PoliticianRequest.new(params[:politician_request])
+    the_id =  params[:user]
+    lookup_id = the_id.to_i
+    @politician_request.user_id = lookup_id
 
     respond_to do |format|
       if @politician_request.save
