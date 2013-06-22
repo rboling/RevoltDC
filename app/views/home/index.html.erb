@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<div id="home">
-  <% if current_user %>
-  	<% if current_user.is_politician %>
-  	  <h3>See Updates From Your Users</h3>
-  	 <% else %>
-  	  <h3>Message Politicians</h3>
-  	  <%= link_to "Politican Reqests", new_politician_request_path %>
-  	<% end %>
-  <% end %>
-=======
 <div id="body_fade">
 <div class="header_wrap">
 	<div class="logo">
@@ -39,13 +28,5 @@
 <div class="phone">
 	<%= image_tag("/assets/phone.png") %>
 </div>
-<!-- 
-    <% if current_user %>
-    	<%= link_to "Send a Text Message", new_text_message_path %> 
-    <% else %>
-    	<p>Log In to Send Text Messages</p>
-   	<% end %> -->
 
-</div>
->>>>>>> 623f64edee4c279d85d854b4af57b71d0c6e5e23
 </div>
