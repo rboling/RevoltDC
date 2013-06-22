@@ -9,7 +9,6 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 <!-- 
   <div class="navbar navbar-inverse navbar-fixed-top" id="bootstrap-header">
     <div class="navbar-inner">
@@ -31,19 +30,25 @@
     </div>
   </div> 
 -->
-<div class="wrapper">
+<div id="body_fade">
+  <div class="wrapper">
+    <ul class="navy">
+      <li><%= link_to image_tag("/assets/home.png", :border=>0), :controller => 'home'%></li>
+      <li><%= link_to image_tag("/assets/dash.png", :border=>0), :controller => 'users'%></li>
+    </ul>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
-</div>
-<div class="wrapper">
-  <footer>
-    <p class="pull-left">
-      Govstream 2013
-        <br>
-      Washington D.C.
-    </p>
-  </footer>
+  <div class="wrapper">
+    <footer>
+      <p class="pull-left">
+        Govstream 2013
+          <br>
+        Washington D.C.
+      </p>
+    </footer>
+  </div>
 </div>
 </body>
 </html>
