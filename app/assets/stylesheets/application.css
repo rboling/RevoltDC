@@ -14,6 +14,58 @@
 body{
 	background-color: #fff;
 	font-family: "Avenir", "Lato", "Helvetica Neue", sans-serif;
+	color: #888;
+	border-top: 5px solid #c24704;
+	margin: 0px;
+}
+body a{
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+}
+body a:hover{
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+	background-color: #ddd;
+	color: #888;
+}
+body h1{
+	color: #888;
+
+}
+body textarea{
+	box-shadow: none;
+}
+body input{
+	box-shadow: none;
+}
+ul.navy{
+	list-style: none;
+	padding: 20px 0px 20px 0px;
+	border-bottom: 2px solid #888;
+}
+ul.navy li{
+	display: inline-block;
+}
+ul.navy li a:hover{
+	background-color: transparent;
+}
+ul.navy li img{
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;	
+}
+ul.navy li img:hover{
+	opacity: 0.6;
+  	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
 #body_fade{
 	display: none;
@@ -59,6 +111,17 @@ p.or{
 	color: #888;
 	font-size: 15pt;
 }
+.button_wrapper_s{
+	max-width: 100%;
+	text-align: center;
+}
+.button_s{
+	padding: 10px 20px 10px 20px;
+	border: 2px solid #888;
+	border-radius: 10px;
+	color: #888;
+	font-size: 13pt;	
+}
 .wrapper{
 	max-width: 650px;
 	margin: auto;
@@ -89,9 +152,11 @@ footer{
 	padding-top: 20px;
 	border-top: 2px solid #888;
 	margin-top: 50px;
+	padding-bottom: 50px;
 }
 footer p{
 	color: #888;
+	text-align: center;
 }
 /* xxxxxxxxxxxxxxx */
 .content{
@@ -100,7 +165,6 @@ footer p{
 	padding-right: 20px;
 	padding-top: 20px;
 }
-
 #user_tab {
   font-size: 12px;
   padding-top: 41px;
@@ -114,7 +178,23 @@ footer p{
 #users {
 	margin: 0 auto;
 	display: block;
-	width: 508px;
+	max-width: 500px;
+	width: 90%;
+	margin-top: 50px;
+}
+#users input{
+	width: 100%;
+	border-radius: 0px;
+	padding: 10px;
+	border: 2px solid #888;
+	box-shadow: none;
+}
+#users textarea{
+	width: 100%;
+	border-radius: 0px;
+	padding: 10px;
+	border: 2px solid #888;	
+	box-shadow: none;
 }
 #users p{
 	font-size: 15pt;
@@ -127,6 +207,26 @@ footer p{
 #users li{
 	display: inline-block;
 	margin: 5px 2px 11px 0;
-	 
+
 }
 
+@media only screen and (max-width : 440px) {
+	.logo{
+		font-size: 40pt;
+	}
+	.button_s{
+		padding: 5px 5px 5px 5px;
+		border: 2px solid #888;
+		border-radius: 10px;
+		color: #888;
+		font-size: 11pt;
+		text-align: left: 	
+	}
+
+}
+
+@media only screen and (max-width : 340px) {
+	.logo{
+		font-size: 30pt;
+	}
+}

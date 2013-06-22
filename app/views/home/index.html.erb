@@ -1,60 +1,54 @@
-<div id="body_fade">
-	<div class="header_wrap">
+<div class="header_wrap">
 		<div class="logo">
 			Gov<span>stream</span>
 		</div>
 		<p class="tag">political engagement redefined</p>
 	</div>
 	<div class="login_info">
+		<div class="button_wrapper_s">
+			<% if current_user %>
+				<%= link_to "Edit Profile", edit_user_path(current_user), :class => "button_s" %>
+	        	<%= link_to "Logout", logout_path, :class => "button_s" %>
+	        	<% if current_user.is_politician %>
+	        		<%= link_to "Send A Text Message", new_text_message_path, :class => "button_s" %>
+	        		<table>
+					  <tr>
+					    <th>Request</th>
+					    <th>Email</th>
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
 
-		<% if current_user %>
-			<%= link_to "Edit Profile", edit_user_path(current_user) %> |
-	        <%= link_to "Logout", logout_path %>
-	        <% if current_user.is_politician %>
-	        	| <%= link_to "Send A Text Message", new_text_message_path %>
+					<% PoliticianRequest.where(:user_id => current_user.id).each do |politician_request| %>
+					  <tr>
+					    <td><%= politician_request.request %></td>
+					    <td><%= politician_request.email %></td>
+					  </tr>
+					<% end %>
+					</table>
+					<br />
+	    		<% else %>
+	    		| <%= link_to "Send a Request", new_politician_request_path, :class => "button_s" %>
 
-			<table>
-			  <tr>
-			    <th>Request</th>
-			    <th>Email</th>
-			    <th></th>
-			    <th></th>
-			    <th></th>
-			  </tr>
+	        		<table>
+					  <tr>
+					    <th>Request</th>
+					    <th>Email</th>
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
 
-			<% PoliticianRequest.where(:user_id => current_user.id).each do |politician_request| %>
-			  <tr>
-			    <td><%= politician_request.request %></td>
-			    <td><%= politician_request.email %></td>
-			  </tr>
-			<% end %>
-			</table>
-
-			<br />
-
-	    	<% else %>
-	    		| Send requests <br />
-	    		<%= link_to "Send a Request", new_politician_request_path %>
-
-			<table>
-			  <tr>
-			    <th>Request</th>
-			    <th>Politician</th>
-			    <th></th>
-			    <th></th>
-			    <th></th>
-			  </tr>
-
-			<% TextMessage.where(:receiver => current_user.phone_number).each do |message| %>
-			  <tr>
-			    <td><%= message.content %></td>
-			    <td><%= message.name %><td>
-			  </tr>
-			<% end %>
-			</table>
-
-			<br />
-
+					<% TextMessage.where(:receiver => current_user.phone_number).each do |message| %>
+					  <tr>
+					    <td><%= message.content %></td>
+					    <td><%= message.name %></td>
+					  </tr>
+					<% end %>
+					</table>
+					<br />
+	    </div>
 	        <% end %>
 	   	<div class="not_logged">
 	    <% else %>
@@ -62,7 +56,7 @@
 	    		<div class="button_wrapper">
 	        		<%= link_to "Sign up", new_user_path, :class => "button" %>
 	        	</div>
-	        	
+
 	        	<p class="or">or <%= link_to "login", login_path %> if you're an existing user</p>
 	    	<% end %>
 	    </div>
@@ -72,5 +66,4 @@
 
 	<div class="phone">
 		<%= image_tag("/assets/phone.png") %>
-	</div>
 	</div>
