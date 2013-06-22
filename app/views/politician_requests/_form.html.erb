@@ -20,8 +20,7 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :users%><br /> 
-    <%= f.select( :users, [["foo", "foo"], ["bar", "bar"], ["flee", "flee"]], {:multiple => true, :size => 2}, {:prompt => "choose politicians"} )%> 
+    <%= collection_select( :users, :user_ids, User.all, :id, :name, options = {:multiple => true})%> 
   </div>
   <div class="actions">
     <%= f.submit %>

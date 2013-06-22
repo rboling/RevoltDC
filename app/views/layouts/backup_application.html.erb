@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- 
   <div class="navbar navbar-inverse navbar-fixed-top" id="bootstrap-header">
     <div class="navbar-inner">
       <div class="container">
@@ -29,21 +28,38 @@
         </div>
       </div>
     </div>
-  </div> 
--->
-<div class="wrapper">
+  </div>
+  <div class="content">
+    <div id="user_tab">
+      <% if current_user %>
+        <%= link_to "Edit Profile", edit_user_path(current_user) %> |
+        <%= link_to "Logout", logout_path %>
+      <% else %>
+        <%= link_to "Register", new_user_path %> |
+        <%= link_to "Login", login_path %>
+      <% end %>
+    </div>
+    <div id="send_text_message">
+      <% if current_user %>
+        <%if current_user.is_politician %>
+          <%= link_to "Send a Text Message", new_text_message_path %> 
+        <% else %>
+          See Updates from Your Politicians
+        <% end %>
+      <% else %>
+        Register Now
+      <% end %>
+    </div>
+  </div>
 
-<%= yield %>
-
-</div>
-<div class="wrapper">
-  <footer>
-    <p class="pull-left">
-      Govstream 2013
-        <br>
-      Washington D.C.
-    </p>
-  </footer>
-</div>
+  <div class="wrapper">
+    <footer>
+      <p class="pull-left">
+        Govstream 2013
+          <br>
+        Washington D.C.
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

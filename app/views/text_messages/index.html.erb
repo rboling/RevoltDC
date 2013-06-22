@@ -13,7 +13,6 @@
 <% @text_messages.each do |text_message| %>
   <tr>
     <td><%= text_message.content %></td>
-    <td><%= text_message.sender %></td>
     <td><%= text_message.receiver %></td>
     <td><%= link_to 'Show', text_message %></td>
     <td><%= link_to 'Edit', edit_text_message_path(text_message) %></td>
