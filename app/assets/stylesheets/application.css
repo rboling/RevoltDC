@@ -110,3 +110,23 @@ footer p{
 	padding-top: 20px;
 	position: relative;
 }
+/**** Users Page ***/
+#users {
+	margin: 0 auto;
+	display: block;
+	width: 508px;
+}
+#users p{
+	font-size: 15pt;
+	color: #888;
+	line-height: 1.7;
+}
+#users ul{
+	margin-left: 0;
+}
+#users li{
+	display: inline-block;
+	margin: 5px 2px 11px 0;
+	 
+}
+
