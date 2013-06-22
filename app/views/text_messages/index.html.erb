@@ -1,0 +1,27 @@
+<h1>Listing text_messages</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Sender</th>
+    <th>Receiver</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @text_messages.each do |text_message| %>
+  <tr>
+    <td><%= text_message.content %></td>
+    <td><%= text_message.sender %></td>
+    <td><%= text_message.receiver %></td>
+    <td><%= link_to 'Show', text_message %></td>
+    <td><%= link_to 'Edit', edit_text_message_path(text_message) %></td>
+    <td><%= link_to 'Destroy', text_message, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Text message', new_text_message_path %>
