@@ -12,7 +12,20 @@
  //= require_tree .
  //=require bootstrap
 
-#user_nav {
-  float: right;
+.content{
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#user_tab {
   font-size: 12px;
+  padding-top: 20px;
+  float: right;
+}
+#send_text_message{
+	padding-top: 20px;
+	position: relative;
 }

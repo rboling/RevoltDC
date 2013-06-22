@@ -11,6 +11,7 @@ WingmanFinder::Application.routes.draw do ||
 
   resources :bars
 
+  resources :text_messages
   resources :users
   resources :user_sessions
 

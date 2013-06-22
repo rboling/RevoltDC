@@ -16,7 +16,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">Project name</a>
+        <%= link_to "GovStream", root_url, :class => "brand" %>
+        <!--<a class="brand" href="#" onclick="go_to_root();">GovStream</a>-->
         <div class="nav-collapse collapse">
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
@@ -27,14 +28,23 @@
       </div>
     </div>
   </div>
-  <div id="user_nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user) %> |
-      <%= link_to "Logout", logout_path %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", login_path %>
-    <% end %>
+  <div class="content">
+    <div id="user_tab">
+      <% if current_user %>
+        <%= link_to "Edit Profile", edit_user_path(current_user) %> |
+        <%= link_to "Logout", logout_path %>
+      <% else %>
+        <%= link_to "Register", new_user_path %> |
+        <%= link_to "Login", login_path %>
+      <% end %>
+    </div>
+    <div id="send_text_message">
+      <% if current_user %>
+        <%= link_to "Send a Text Message", new_text_message_path %> 
+      <% else %>
+        <h1>Log In to Send Text Messages</h1>
+      <% end %>
+    </div>
   </div>
 
 <%= yield %>

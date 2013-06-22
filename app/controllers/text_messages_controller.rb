@@ -39,11 +39,28 @@ class TextMessagesController < ApplicationController
 
   # POST /text_messages
   # POST /text_messages.json
+  def send_text_message(text_message)
+    number_to_send_to = text_message.receiver
+    message = text_message.content
+    twilio_sid = "AC50070372767bdf26a090b08007bba07f"
+    twilio_token = "8ae1cdbb08d55b99cab34174c3cd8bbb"
+    twilio_phone_number = "2245209581"
+    @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
+    @twilio_client.account.sms.messages.create(
+      :from => "+1#{twilio_phone_number}",
+      :to => number_to_send_to,
+      :body => message
+    )
+    
+  end
+
   def create
     @text_message = TextMessage.new(params[:text_message])
 
     respond_to do |format|
       if @text_message.save
+        phone_number = @text_message.receiver
+        send_text_message(@text_message)
         format.html { redirect_to @text_message, notice: 'Text message was successfully created.' }
         format.json { render json: @text_message, status: :created, location: @text_message }
       else
@@ -51,20 +68,6 @@ class TextMessagesController < ApplicationController
         format.json { render json: @text_message.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def send_text_message(number)
-    number_to_send_to = number
-    twilio_sid = 
-    twilio_token = 
-    twilio_phone_number = "2245209581"
-    @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
-    @twilio_client.account.sms.messages.create(
-      :from => "+1#{twilio_phone_number}",
-      :to => number_to_send_to
-      :body => "This is a sample message"
-    )
-    
   end
 
   # PUT /text_messages/1
