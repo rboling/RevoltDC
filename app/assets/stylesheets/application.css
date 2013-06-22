@@ -11,7 +11,89 @@
  //= require_self
  //= require_tree .
  //=require bootstrap
+body{
+	background-color: #fff;
+	font-family: "Avenir", "Lato", "Helvetica Neue", sans-serif;
+}
+#body_fade{
+	display: none;
+}
+.phone{
+	max-height: 631px;
+	max-width: 300px;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	margin-top: 50px;
+	padding-top: 20px;
 
+}
+.expo{
+	max-width: 500px;
+	margin: auto;
+	text-align:justify;
+	padding-top: 20px;
+	border-top: 2px solid #888;
+	margin-top: 50px;
+}
+.expo p{
+	font-size: 15pt;
+	color: #888;
+	line-height: 1.7;
+}
+.button_wrapper{
+	max-width: 100%;
+	text-align: center;
+}
+p.or{
+	text-align: center;
+	line-height: 2;
+	padding: 20px 10px 20px 10px;
+	color: #888;
+	font-size: 13pt;
+}
+.button{
+	padding: 10px 50px 10px 50px;
+	border: 2px solid #888;
+	border-radius: 10px;
+	color: #888;
+	font-size: 15pt;
+}
+.wrapper{
+	max-width: 650px;
+	margin: auto;
+}
+.header_wrap{
+	padding-bottom: 70px;
+	padding-top: 30px;
+}
+.logo{
+	text-align: center;
+	font-size: 60pt;
+	font-weight: 300;
+	color: #888;
+}
+.logo span{
+	font-weight: 900;
+}
+p.tag{
+	text-align: center;
+	text-align: center;
+	font-size: 16pt;
+	font-weight: 300;
+	color: #888;
+}
+footer{
+	max-width: 500px;
+	margin: auto;
+	padding-top: 20px;
+	border-top: 2px solid #888;
+	margin-top: 50px;
+}
+footer p{
+	color: #888;
+}
+/* xxxxxxxxxxxxxxx */
 .content{
 	position: relative;
 	padding-left: 20px;

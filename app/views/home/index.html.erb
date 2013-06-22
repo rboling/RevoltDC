@@ -1,4 +1,39 @@
-<div id="home">
-  <h1>Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+<div id="body_fade">
+<div class="header_wrap">
+	<div class="logo">
+		Gov<span>stream</span>
+	</div>
+	<p class="tag">political engagement redefined</p>
+</div>
+<div class="login_info">
+
+	<% if current_user %>
+		<%= link_to "Edit Profile", edit_user_path(current_user) %> |
+        <%= link_to "Logout", logout_path %>
+
+   	<div class="not_logged">
+    	<% else %>
+
+    		<div class="button_wrapper">
+        		<%= link_to "Sign up", new_user_path, :class => "button" %>
+        	</div>
+        	
+        	<p class="or">or <%= link_to "login", login_path %> if you're an existing user</p>
+    	<% end %>
+    </div>
+<div class="expo">
+	<p>Govstream gives people the power to engage with politicians on a whole new level. With the power of sms texting you can get updates on what politicians are voting on and even send back messages to get your voice heard.</p>
+</div>
+
+<div class="phone">
+	<%= image_tag("/assets/phone.png") %>
+</div>
+<!-- 
+    <% if current_user %>
+    	<%= link_to "Send a Text Message", new_text_message_path %> 
+    <% else %>
+    	<p>Log In to Send Text Messages</p>
+   	<% end %> -->
+
+</div>
 </div>
