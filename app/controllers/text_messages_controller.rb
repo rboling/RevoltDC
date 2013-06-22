@@ -55,8 +55,18 @@ class TextMessagesController < ApplicationController
   end
 
   def create
+    puts "the numbers"
+    puts "#{params[:receiver]}"
+    the_array = params[:receiver]
+    the_array.each do |this|
+      @new_text_message = TextMessage.new
+      @new_text_message.content = params["text_message"]["content"]
+      @new_text_message.receiver = this
+      send_text_message(@new_text_message)
+    end
     @text_message = TextMessage.new(params[:text_message])
     @text_message.name = current_user.name
+    @text_message.receiver = params[:receiver].first
     respond_to do |format|
       if @text_message.save
         phone_number = @text_message.receiver

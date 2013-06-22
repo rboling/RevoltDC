@@ -15,9 +15,14 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
+  <!--<div class="field">
+    <%#= f.label :receiver %><br />
+    <%#= f.text_field :receiver %>
+  </div> -->
   <div class="field">
-    <%= f.label :receiver %><br />
-    <%= f.text_field :receiver %>
+  <%#= user_stuff.label "Users"%><br />
+  <%# = collection_select( :users, :id, User.all, :id, :name, {}, {:multiple => true})%> 
+  <%= select_tag 'receiver', options_from_collection_for_select(User.all, :phone_number, :name), multiple: true, size: '10%' %>
   </div>
   <div class="actions">
     <%= f.submit %>
