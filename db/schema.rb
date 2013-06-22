@@ -55,19 +55,7 @@ ActiveRecord::Schema.define(:version => 20130622160227) do
     t.string   "password"
   end
 
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "city"
-    t.text     "bio"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.string   "state"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.string   "persistence_token"
-    t.string   "email"
-    t.string   "phone_number"
-    t.boolean  "is_politician"
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'bool' for column 'is_politician'
 
 end

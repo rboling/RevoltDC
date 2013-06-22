@@ -15,6 +15,8 @@ body{
 	background-color: #fff;
 	font-family: "Avenir", "Lato", "Helvetica Neue", sans-serif;
 	color: #888;
+	border-top: 5px solid #c24704;
+	margin: 0px;
 }
 body a{
   	-webkit-transition: all .2s ease-in-out;
@@ -154,6 +156,7 @@ footer{
 }
 footer p{
 	color: #888;
+	text-align: center;
 }
 /* xxxxxxxxxxxxxxx */
 .content{
@@ -176,7 +179,7 @@ footer p{
 	margin: 0 auto;
 	display: block;
 	max-width: 500px;
-	width: 100%;
+	width: 90%;
 	margin-top: 50px;
 }
 #users input{
@@ -205,4 +208,24 @@ footer p{
 	display: inline-block;
 	margin: 5px 2px 11px 0;
 
+}
+
+@media only screen and (max-width : 440px) {
+	.logo{
+		font-size: 40pt;
+	}
+	.button_s{
+		padding: 10px 10px 10px 10px;
+		border: 2px solid #888;
+		border-radius: 10px;
+		color: #888;
+		font-size: 12pt;	
+	}
+
+}
+
+@media only screen and (max-width : 340px) {
+	.logo{
+		font-size: 30pt;
+	}
 }
