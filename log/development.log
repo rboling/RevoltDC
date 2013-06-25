@@ -59530,3 +59530,1126 @@ Served asset /application.js - 304 Not Modified (3ms)
 
 Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-22 16:29:48 -0400
 Served asset /home.png - 304 Not Modified (0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130616201418)
+Migrating to CreateBars (20130616201614)
+Migrating to AddStateToUsers (20130616201707)
+Migrating to AddCryptedPasswordToUsers (20130617013457)
+Migrating to AddPasswordSaltToUsers (20130617013538)
+Migrating to AddPersistenceTokenToUsers (20130617013657)
+Migrating to AddEmailToUsers (20130617013730)
+Migrating to CreateUserSessions (20130617015709)
+Migrating to AddEmailToUserSessions (20130617030905)
+Migrating to AddPasswordToUserSessions (20130617030923)
+Migrating to CreateTextMessages (20130622140859)
+Migrating to RemoveSenderFromTextMessages (20130622150029)
+Migrating to AddPhoneNumberToUsers (20130622151459)
+Migrating to CreatePoliticians (20130622152802)
+Migrating to AddEmailToPoliticians (20130622152828)
+Migrating to AddIsPoliticianToUser (20130622153045)
+Migrating to CreatePoliticianRequests (20130622160144)
+Migrating to AddPoliticianToPoliticianRequests (20130622160227)
+Migrating to AddUserIdToPoliticianRequests (20130622190919)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "politician_requests" ADD "user_id" varchar(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "politician_requests" ADD "integer" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130622190919')
+  [1m[36m (262.6ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveUserIdFromPoliticianRequests (20130622191008)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622191008')[0m
+  [1m[35m (222.8ms)[0m  commit transaction
+Migrating to RemoveIntegerFromPoliticianRequests (20130622191022)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130622191022')
+  [1m[36m (641.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserIdAgainToPoliticianRequests (20130622191051)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "altered_politician_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "request" text, "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "politician" varchar(255), "user_id" varchar(255), "integer" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("politician_requests")
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "politician_requests"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "politician_requests"
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "politician_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "request" text, "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "politician" varchar(255), "integer" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("altered_politician_requests")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_politician_requests"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "altered_politician_requests"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130622191051')[0m
+  [1m[35m (331.9ms)[0m  commit transaction
+Migrating to RemoveIntegerAgainFromPoliticianRequests (20130622191440)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "altered_politician_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "request" text, "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "politician" varchar(255), "integer" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("politician_requests")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "politician_requests"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "politician_requests"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "politician_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "request" text, "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "politician" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_politician_requests")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "altered_politician_requests"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "altered_politician_requests"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130622191440')
+  [1m[36m (221.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAnotherIdToPoliticianRequests (20130622193423)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "politician_requests" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130622193423')
+  [1m[36m (244.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddNameToTextMessages (20130622194659)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "text_messages" ADD "name" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130622194659')
+  [1m[36m (219.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("bars")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("politician_requests")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("politicians")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("text_messages")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("user_sessions")
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 16:30:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Compiled application.js  (1ms)  (pid 11369)
+Completed 200 OK in 187ms (Views: 107.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /application.css - 200 OK (93ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /bars.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /bootstrap-responsive.css - 200 OK (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /politician_requests.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /bootstrap.css - 200 OK (10ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /politicians.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /user_sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /text_messages.css - 200 OK (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /phone.png - 200 OK (7ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 16:30:34 -0400
+Served asset /home.png - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 16:32:18 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /politician_requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /politicians.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-24 16:32:19 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 16:55:41 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Compiled application.css  (0ms)  (pid 16944)
+Compiled application.js  (0ms)  (pid 16944)
+Completed 200 OK in 168ms (Views: 40.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 16:59:20 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Compiled application.js  (1ms)  (pid 17111)
+Completed 200 OK in 170ms (Views: 37.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 16:59:57 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:12:10 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Compiled application.css  (1ms)  (pid 17272)
+Compiled application.js  (0ms)  (pid 17272)
+Completed 200 OK in 172ms (Views: 41.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:12:14 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-24 17:20:43 -0400
+Compiled jquery.js  (8ms)  (pid 17373)
+Served asset /jquery.js - 200 OK (75ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-24 17:20:50 -0400
+Compiled jquery_ujs.js  (0ms)  (pid 17373)
+Served asset /jquery_ujs.js - 200 OK (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:21:21 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 163ms (Views: 32.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:30 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Compiled application.css  (0ms)  (pid 17655)
+Compiled application.js  (0ms)  (pid 17655)
+Completed 200 OK in 175ms (Views: 43.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:31 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:31 -0400
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:31 -0400
+Served asset /home.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:31 -0400
+Served asset /phone.png - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:33 -0400
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:33 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:33 -0400
+Served asset /home.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:33 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:34 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:34 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:34 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:34 -0400
+Served asset /home.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:34 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:35 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:35 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:35 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:35 -0400
+Served asset /home.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:35 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:36 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:37 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:37 -0400
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:37 -0400
+Served asset /home.png - 200 OK (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:37 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:39 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:39 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:39 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:39 -0400
+Served asset /home.png - 200 OK (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:39 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 17:25:41 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 17:25:41 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 17:25:41 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 17:25:41 -0400
+Served asset /home.png - 200 OK (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 17:25:41 -0400
+Served asset /phone.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:09:07 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Compiled application.js  (1ms)  (pid 18359)
+Completed 200 OK in 163ms (Views: 37.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:09:07 -0400
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:09:07 -0400
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:09:07 -0400
+Served asset /home.png - 200 OK (2ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:09:07 -0400
+Served asset /phone.png - 200 OK (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:16:04 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Compiled application.css  (0ms)  (pid 18580)
+Compiled application.js  (0ms)  (pid 18580)
+Completed 200 OK in 180ms (Views: 98.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /defaults.js - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /defaults.js - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.0) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.0) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.0) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.0) lib/rails/engine.rb:479:in `call'
+  railties (3.2.0) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.0) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/kevin/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /home.png - 200 OK (5ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:16:05 -0400
+Served asset /phone.png - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:25:58 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Compiled application.css  (0ms)  (pid 18746)
+Compiled application.js  (0ms)  (pid 18746)
+Completed 200 OK in 122ms (Views: 42.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:25:58 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:25:58 -0400
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:28:06 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 121ms (Views: 34.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:28:07 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:28:07 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:28:07 -0400
+Served asset /home.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:28:07 -0400
+Served asset /phone.png - 304 Not Modified (9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:40:56 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Compiled application.css  (1ms)  (pid 19616)
+Compiled application.js  (0ms)  (pid 19616)
+Completed 200 OK in 184ms (Views: 96.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:40:57 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:40:57 -0400
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:40:57 -0400
+Served asset /home.png - 200 OK (14ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:40:57 -0400
+Served asset /phone.png - 200 OK (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:41:36 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:41:36 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:41:36 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:41:37 -0400
+Served asset /home.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:41:37 -0400
+Served asset /phone.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:44:29 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Compiled application.css  (1ms)  (pid 19840)
+Compiled application.js  (0ms)  (pid 19840)
+Completed 200 OK in 186ms (Views: 56.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:44:30 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:44:30 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:44:30 -0400
+Served asset /home.png - 304 Not Modified (10ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:44:30 -0400
+Served asset /phone.png - 304 Not Modified (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:46:03 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 189ms (Views: 33.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:46:03 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:46:03 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:46:03 -0400
+Served asset /home.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:46:03 -0400
+Served asset /phone.png - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:52:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.4ms)
+Compiled application.css  (1ms)  (pid 20690)
+Compiled application.js  (0ms)  (pid 20690)
+Completed 200 OK in 289ms (Views: 128.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:52:33 -0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:52:33 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:52:33 -0400
+Served asset /home.png - 304 Not Modified (22ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:52:33 -0400
+Served asset /phone.png - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:55:11 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (104.2ms)
+Compiled application.js  (1ms)  (pid 20838)
+Completed 200 OK in 2621ms (Views: 2349.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 19:55:14 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 19:55:15 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 19:55:15 -0400
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 19:55:15 -0400
+Served asset /home.png - 304 Not Modified (40ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 19:55:15 -0400
+Served asset /phone.png - 304 Not Modified (24ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 20:03:24 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.2ms)
+Compiled application.css  (3ms)  (pid 21109)
+Compiled application.js  (0ms)  (pid 21109)
+Completed 200 OK in 334ms (Views: 132.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 20:03:25 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 20:03:25 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 20:03:25 -0400
+Served asset /phone.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 20:03:25 -0400
+Served asset /home.png - 304 Not Modified (11ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 20:07:32 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.4ms)
+Compiled application.css  (1ms)  (pid 21328)
+Compiled application.js  (1ms)  (pid 21328)
+Completed 200 OK in 258ms (Views: 97.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 20:07:32 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 20:07:32 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 20:07:32 -0400
+Served asset /home.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 20:07:32 -0400
+Served asset /phone.png - 304 Not Modified (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 20:15:49 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.5ms)
+Compiled application.css  (1ms)  (pid 21512)
+Compiled application.js  (0ms)  (pid 21512)
+Completed 200 OK in 443ms (Views: 207.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 20:36:29 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (47.3ms)
+Compiled bars.css  (63ms)  (pid 4348)
+Compiled bootstrap-responsive.css  (0ms)  (pid 4348)
+Compiled bootstrap.css  (1ms)  (pid 4348)
+Compiled home.css  (2ms)  (pid 4348)
+Compiled politician_requests.css  (2ms)  (pid 4348)
+Compiled politicians.css  (3ms)  (pid 4348)
+Compiled scaffolds.css  (20ms)  (pid 4348)
+Compiled text_messages.css  (1ms)  (pid 4348)
+Compiled user_sessions.css  (2ms)  (pid 4348)
+Compiled users.css  (2ms)  (pid 4348)
+Compiled application.css  (466ms)  (pid 4348)
+Completed 500 Internal Server Error in 891ms
+
+ActionView::Template::Error (couldn't find file 'jquery.placeholder'
+  (in /home/kevin/Desktop/RevoltDC/app/assets/javascripts/application.js:14)):
+    3: <head>
+    4:   <title>Govstream</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag :application %>
+    7: 
+    8: 
+    9:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2651821164758069574_24866120'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.8ms)
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 21:39:29 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (53.3ms)
+Compiled jquery.js  (3ms)  (pid 4718)
+Compiled jquery_ujs.js  (1ms)  (pid 4718)
+Compiled jquery.placeholder.js  (0ms)  (pid 4718)
+Compiled bars.js  (151ms)  (pid 4718)
+Compiled bootstrap.js  (1ms)  (pid 4718)
+Completed 500 Internal Server Error in 738ms
+
+ActionView::Template::Error (SyntaxError: reserved word "function"
+  (in /home/kevin/Desktop/RevoltDC/app/assets/javascripts/home.js.coffee)):
+    3: <head>
+    4:   <title>Govstream</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag :application %>
+    7: 
+    8: 
+    9:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3285128260115096749_39659820'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.2ms)
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/kevin/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 21:44:54 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (46.0ms)
+Compiled home.js  (0ms)  (pid 4847)
+Compiled politician_requests.js  (157ms)  (pid 4847)
+Compiled politicians.js  (2ms)  (pid 4847)
+Compiled text_messages.js  (1ms)  (pid 4847)
+Compiled user_sessions.js  (1ms)  (pid 4847)
+Compiled users.js  (1ms)  (pid 4847)
+Compiled application.js  (290ms)  (pid 4847)
+Completed 200 OK in 661ms (Views: 498.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /bars.css - 200 OK (6ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /politician_requests.css - 200 OK (3ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /politicians.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /bootstrap.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /bootstrap-responsive.css - 200 OK (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /home.css - 200 OK (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /text_messages.css - 200 OK (6ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /user_sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /application.css - 200 OK (82ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /bars.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /jquery.placeholder.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /bootstrap.js - 200 OK (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /politician_requests.js - 200 OK (2ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /politicians.js - 200 OK (17ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /text_messages.js - 200 OK (8ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /user_sessions.js - 200 OK (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /users.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /application.js - 200 OK (22ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /phone.png - 304 Not Modified (29ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 21:44:55 -0400
+Served asset /home.png - 304 Not Modified (12ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Compiled home.js  (0ms)  (pid 4847)
+Compiled application.js  (13ms)  (pid 4847)
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /politician_requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /politicians.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /text_messages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /bars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /politician_requests.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /home.js - 200 OK (71ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /text_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:40 -0400
+Served asset /user_sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:41 -0400
+Served asset /application.js - 200 OK (34ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 21:45:41 -0400
+Served asset /home.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/phone.png" for 127.0.0.1 at 2013-06-24 21:45:41 -0400
+Served asset /phone.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-06-24 21:45:45 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (12.2ms)
+  Rendered users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 132ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /bars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politician_requests.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /politician_requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /politicians.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /text_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_sessions.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /user_sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.placeholder.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /jquery.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /bars.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/politician_requests.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /politician_requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/politicians.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /politicians.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/text_messages.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /text_messages.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_sessions.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /user_sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/home.png" for 127.0.0.1 at 2013-06-24 21:45:46 -0400
+Served asset /home.png - 304 Not Modified (0ms)
